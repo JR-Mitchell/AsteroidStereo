@@ -1,0 +1,9 @@
+('DEBUG :: ', '/Users/ktulhu/Desktop/pi16/Server/pages/')
+ * Serving Flask app "StereoFlask" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+('Test', 'test')
+Connection ['127.0.0.1']
+Authorising for ImmutableList(['127.0.0.1'])

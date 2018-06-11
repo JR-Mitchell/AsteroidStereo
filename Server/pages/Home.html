@@ -1,0 +1,100 @@
+<html>
+<title>Asteroid v3.0</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    padding: 80px;
+    background: #444444;
+    color: white;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subhead {
+    margin-left: 20px;
+}
+.side {
+    flex: 5%;
+    background-color: #30799B;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    flex: 70%;
+    background-color: #cccccc;
+    padding: 20px;
+}
+.button {
+    background-color: #262626;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px
+}
+.volb {
+    border-radius: 100px;
+    background-color: #222222;
+    color: white;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+</style>
+<head>
+
+</head>
+<body>
+<div class="header">
+<b><h1><pre>
+____ ____ ___ ____ ____ ____ _ ___
+|__| [__   |  |___ |__/ |  | | |  \
+|  | ___]  |  |___ |  \ |__| | |__/  v3.0
+</pre></h1></b></div>
+<div class="subhead">
+<h3 style="font-family:Arial">Music Player Daemon :: Currently playing: '??!!' by '!!??'<br>
+Current Playlist: '??xx!!'</h3>
+</div>
+<form action="playback" method="post">
+    <div class="row">
+        <div class="side">
+            <button class='button' type="submit" name="play" value="1">Play</button><br>
+            <button class='button' type="submit" name="play" value="0">Pause</button><br>
+            <button class='button' type="submit" name="next" value="1">Next</button><br>
+        </div>
+    
+        <div class="main">
+        <button class='button' type="submit" name="playlist" value="1">List Playlists</button>
+        <button class='button' type="submit" name="list" value="1">List Songs</button><br>
+        <button class='button' formaction="search">Search</button>
+        <button class="button" formaction="add_songs" formmethod="post" name="playcache" value="1">Play Cache</button>
+        <h3>Volume: !!!?</h3>
+        <button class='button volb' type="submit" name="vol" value="2"><b>+</b></button>
+        <button class='button volb' type="submit" name="vol" value="1"><b>-</b></button>
+        <hr>
+        <button class='button' type="submit" name="toggle" value="1">Toggle Stereo</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
