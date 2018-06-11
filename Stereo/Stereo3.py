@@ -145,6 +145,14 @@ class StereoClient(StereoLogic):
 		self._connect()
 		self._make_cache()
 
+	def add(self, uid):
+		try:
+			self.c.add(uid)
+		except:
+			return False
+		else:
+			return True
+
 	def _load_playlist(self):
 		if int(self.c.status()["playlistlength"]) > 400:
 			return 0

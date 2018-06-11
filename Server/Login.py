@@ -11,6 +11,9 @@ class LoginPage:
 			self.html = f.read()
 
 	def check(self, cooki_id):
+		"""
+		TODO: Needs better cookie auth
+		"""
 		users = [f for f in listdir(USERS_PATH) if isfile(join(USERS_PATH, f))]
 		if cooki_id in users:
 			return True
@@ -18,6 +21,9 @@ class LoginPage:
 			return False
 
 	def _set_cookie(self, h_uname):
+		"""
+		TODO: Needs better cookie auth
+		"""
 		resp = current_app.make_response(redirect('/stereo'))
 		resp.set_cookie("pass", value=h_uname)
 		return resp
