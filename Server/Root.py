@@ -11,6 +11,11 @@ class HomePage:
 		self.html = self.html.replace("!!??", met["artist"])
 		self.html = self.html.replace("!!!?", vol)
 		self.html = self.html.replace("??xx!!", str(client.current_playlist))
+		if met["title"] == met["artist"] == 'None':
+			self.html = self.html.replace(self.html[self.html.find("!?x?!"):self.html.find("!?x??") + 5],"")
+		else:
+    			self.html = self.html.replace("!?x?!","")
+    			self.html = self.html.replace("!?x??","")
 
 	def __str__(self):
 		return self.html
